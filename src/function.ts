@@ -43,3 +43,22 @@ const add: Add = (val1: number, val2: number): number => {
 };
 
 console.log(add(20, 17));
+
+// default parameter
+const fullName = (first: string, last: string = "lastName"): string => {
+  return first + " " + last;
+};
+
+console.log(fullName("Novi")); // jadinya Novi lastName
+console.log(fullName("Novi", "Andriyani"));
+
+// optional parameter (?) undefined
+/* error klo dioperasikan dgn returnnya number
+    karena number +/*- dengan (?)optional jadinya undefined
+*/
+const proPlayer = (name: string, team?: string): string => {
+  return name + " from " + team;
+};
+
+console.log(proPlayer("kairi", "onic"));
+console.log(proPlayer("jo"));
